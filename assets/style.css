@@ -1,0 +1,22 @@
+body
+{
+    font-family: "Inter", serif;
+    
+}
+.offcanvas {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+.offcanvas.show {
+    transform: translateX(0);
+}
+.backdrop {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+.backdrop.show {
+    display: block;
+}
+header {
+    background-image: url(../images/gallery/header_background.jpg);
+}
