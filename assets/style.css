@@ -1,5 +1,6 @@
 body {
     font-family: "Inter", serif;
+    
    
 }
 .container {
@@ -181,6 +182,184 @@ body {
     opacity: 0.1;
 }
 
+.about-section
+{
+    background-image: url('../images/gallery/header_background.jpg');
+}
+
+
+/* Our Projects Css */
+.projects-section {
+    padding: 4rem 0;
+    background: #f8f8f8;
+    background-image: url('../images/gallery/header_background.jpg');
+}
+
+.projects-title {
+    text-align: center;
+    color: #003087;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.projects-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.projects-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-category {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    color: #003087;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-description {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    background: #003087;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.read-more-btn:hover {
+    background: #002266;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .projects-slider {
+        overflow: hidden;
+        width: 100%;
+    }
+    .projects-track {
+        display: flex;
+        transition: transform 0.3s ease-out;
+        width: 400%;  /* For 4 slides */
+        overflow: hidden;
+    }
+    
+    .project-card {
+        width: 25%;  /* Each slide takes 1/4 of track */
+        flex: 0 0 25%;
+    }
+
+    .slider-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .nav-btn {
+        background: rgba(0, 48, 135, 0.8);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .progress-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background: #003087;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-card {
+        padding: 0.75rem;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .read-more-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* end of our project  css */
+
+
+
+
+
+
+/* Responsive */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -190,6 +369,26 @@ body {
     .slider-container {
         width: 100%;
         height: 60vh;
+        position: relative;
+    }
+    .slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .slide.active {
+        display: block;
+        opacity: 1;
+        transform: none;
+    }
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     .content {
         width: 100%;
@@ -203,8 +402,11 @@ body {
     .content h1 {
         font-size: 2rem;
     }
-}
-
+    .caption {
+        bottom: 0;
+        z-index: 2;
+    }
+ }
 @keyframes slideIn {
     from {
         transform: translateY(20px);
