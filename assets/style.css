@@ -189,170 +189,295 @@ body {
 
 
 /* Our Projects Css */
-.projects-section {
-    padding: 4rem 0;
-    background: #f8f8f8;
-    background-image: url('../images/gallery/header_background.jpg');
+.mini
+{
+    font-size: 10px;
 }
-
-.projects-title {
-    text-align: center;
-    color: #003087;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.projects-slider {
-    max-width: 1200px;
+ /* Container Styles */
+ .our_futsals {
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
-.projects-track {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+/* Futsal Card Styles */
+.futsal-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    transition: transform 0.2s;
+    height: 500px;
 }
 
-.project-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
+.futsal-card:hover {
     transform: translateY(-5px);
 }
 
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.project-category {
-    color: #666;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.project-title {
-    color: #003087;
-    font-size: 1.4rem;
-    margin-bottom: 0.8rem;
-}
-
-.project-description {
-    color: #444;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+/* Image Container Styles */
+.futsal-image-container {
+    position: relative;
+    height: 250px;
     overflow: hidden;
 }
 
-.read-more-btn {
-    background: #003087;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: fit-content;
+.futsal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
 }
 
-.read-more-btn:hover {
-    background: #002266;
-    transform: translateY(-2px);
+
+
+/* Futsal Information Styles */
+.futsal-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.futsal-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.futsal-location,
+.futsal-price,
+.futsal-contact,
+.futsal-time {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.futsal-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    font-size: 15px;
+}
+
+.futsal-button:hover {
+    background-color: #0056b3;
+}
+
+/* Slick Slider Custom Styles */
+.slider {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.slick-prev {
+    left: -30px;
+}
+
+.slick-next {
+    right: -30px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px;
+    color: #007BFF;
+    opacity: 0.75;
+}
+
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #007BFF;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .our_futsals {
+        padding: 0 30px;
+    }
 }
 
 @media (max-width: 768px) {
-    .projects-slider {
-        overflow: hidden;
-        width: 100%;
-    }
-    .projects-track {
-        display: flex;
-        transition: transform 0.3s ease-out;
-        width: 400%;  /* For 4 slides */
-        overflow: hidden;
+    .our_futsals {
+        padding: 0 20px;
     }
     
-    .project-card {
-        width: 25%;  /* Each slide takes 1/4 of track */
-        flex: 0 0 25%;
+    .futsal-card {
+        margin: 5px;
     }
 
-    .slider-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 1rem;
+    .slick-prev {
+        left: -25px;
     }
 
-    .nav-btn {
-        background: rgba(0, 48, 135, 0.8);
-        color: white;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .progress-dots {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    .dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #ccc;
-        cursor: pointer;
-    }
-
-    .dot.active {
-        background: #003087;
-    }
-}
-
-@media (max-width: 480px) {
-    .projects-title {
-        font-size: 1.75rem;
-        margin-bottom: 2rem;
-    }
-
-    .project-card {
-        padding: 0.75rem;
-    }
-
-    .project-image {
-        height: 200px;
-    }
-
-    .project-title {
-        font-size: 1.2rem;
-    }
-
-    .read-more-btn {
-        width: 100%;
-        text-align: center;
+    .slick-next {
+        right: -25px;
     }
 }
 /* end of our project  css */
+
+/* where we work css */
+.wherewework {
+    background-image:url('../images/gallery/header_background.jpg'); 
+    padding: 50px 0;
+}
+
+/* End of where we work css */
+
+/*  Our Partner and future goals Css Start  */
+ /* Partners & Goals section styles - using 'pg' prefix */
+ .pg-section {
+    background-image:url('../images/gallery/header_background.jpg'); 
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.pg-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .pg-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Header styles */
+.pg-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.pg-title {
+    color: #1a365d;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.pg-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #f97316;
+    border-radius: 2px;
+}
+
+/* Image styles */
+.pg-image-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.pg-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.pg-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+}
+
+/* Content styles */
+.pg-content {
+   
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.pg-text {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    
+}
+
+/* Target icon */
+.pg-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Call to action */
+.pg-cta {
+    display: inline-block;
+    background-color: #1a365d;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.pg-cta:hover {
+    background-color: #2d4a7c;
+}
+/*  Our Partner and future goals Css End  */
 
 
 

@@ -11,6 +11,9 @@ $currentPage = "home";
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
 </head>
@@ -96,62 +99,133 @@ $currentPage = "home";
 <!-- ENd of about us section -->
 
 <!-- Our Project Start -->
-<section class="projects-section">
+
         <h2 class="projects-title">Our Projects</h2>
         
-        <div class="projects-slider">
-            <div class="projects-track">
-                <div class="project-card">
-                    <img src="images/gallery/ourprojectsliderimages/Rescue.jpg" alt="Rescue & Rehabilitation" class="project-image">
-                    <span class="project-category">De-institutionalization</span>
-                    <h3 class="project-title">Rescue & Rehabilitation</h3>
-                    <p class="project-description">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement....</p>
-                    <button class="read-more-btn">Read More</button>
+        <div class="our_futsals">
+        <div class="slider">
+            <!-- Futsal Card 1 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
                 </div>
-                
-                <div class="project-card">
-                    <img src="images/gallery/ourprojectsliderimages/Reintegration.jpg" alt="Family Reintegration" class="project-image">
-                    <span class="project-category">De-institutionalization</span>
-                    <h3 class="project-title">Family Reintegration</h3>
-                    <p class="project-description">Our trained social workers search for the families of the rescued children and begin the reintegration process. We do this using government-approved, recommended procedures..</p>
-                    <button class="read-more-btn">Read More</button>
+                <div class="futsal-info">
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
                 </div>
-                
-                <div class="project-card">
-                    <img src="images/gallery/ourprojectsliderimages/trafficking.jpeg" alt="Trafficking Prevention" class="project-image">
-                    <span class="project-category">Trafficking Prevention</span>
-                    <h3 class="project-title">Trafficking Prevention</h3>
-                    <p class="project-description">Recent trends show that over 50% of children rescued from exploitative institutions are often from Karnali province, Makawanpur and Chitawan districts...</p>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-                
-                <div class="project-card">
-                    <img src="images/gallery/ourprojectsliderimages/icp.jpeg" alt="Local Child Protection Project" class="project-image">
-                    <span class="project-category">Training and Advocacy</span>
-                    <h3 class="project-title">Local Child Protection Project (LCP)</h3>
-                    <p class="project-description">With financial support from the Danish Government Civil Society Fund (CISU) and technical support from Alternatives To Separation (ATOS), FGN has been implementing the project since March 1, 2024.</p>
-                    <button class="read-more-btn">Read More</button>
-                </div>
+            </div>
 
-                <div class="project-card">
-                    <img src="images/gallery/ourprojectsliderimages/icp.jpeg" alt="Local Child Protection Project" class="project-image">
-                    <span class="project-category">Training and Advocacy</span>
-                    <h3 class="project-title">Local Child Protection Project (LCP)</h3>
-                    <p class="project-description">With financial support from the Danish Government Civil Society Fund (CISU) and technical support from Alternatives To Separation (ATOS), FGN has been implementing the project since March 1, 2024.</p>
-                    <button class="read-more-btn">Read More</button>
+            <!-- Futsal Card 2 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">Trafficking Prevention </p>
+                    <h2 class="futsal-title">Trafficking Prevention</h2>
+                    <p class="futsal-location">Recent trends show that over 50% of children rescued from exploitative
+                         institutions are often from Karnali province, Makawanpur and Chitawan districts. 
+                         ...</p>
+                    <button class="futsal-button">Learn More</button>
                 </div>
             </div>
-            
-            <div class="slider-nav">
-                <button class="nav-btn prev-btn">←</button>
-                <button class="nav-btn next-btn">→</button>
+
+            <!-- Futsal Card 1 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
+                </div>
             </div>
-            
-            <div class="progress-dots"></div>
+
+            <!-- Futsal Card 1 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Futsal Card 1 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
     <!-- Our Project End -->
 
+<!-- Where we work Start -->
+<div class="wherewework">
+    <h1 class="text-3xl font-bold text-center text-blue-900 mb-8">Where We Work</h1>
+    <div class="map flex justify-center">
+        <img 
+            src="images/Map.png" 
+            alt="Map of Nepal" 
+            class="w-full h-auto md:w-3/4 lg:w-2/3"
+        >
+    </div>
+</div>
+<!-- End of where we work -->
+
+<!-- Our Partner and future goals Start -->
+<section class="pg-section">
+        <div class="pg-container">
+            <div class="pg-header">
+                <svg class="pg-icon" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+                <h1 class="pg-title">Our Partners and Future Goals</h1>
+            </div>
+            
+            <div class="pg-grid">
+                <div class="pg-image-wrapper">
+                    <img class="pg-image" src="images/Mother-and-Daughter.jpg" alt="Mother holding child in mountainous background">
+                    <div class="pg-image-overlay"></div>
+                </div>
+                
+                <div class="pg-content bg-blue-50">
+                    <p class="pg-text">We continue to expand our work in the sector of child protection, continue working in the de-institutionalization of child care homes, alternative care, preventing family separations as well as to become involved with women and family issues.</p>
+                    <p class="pg-text">Our team is well trained and capable to broaden our reach into new areas of protection. We hope that new partners will have an interest in who we are and what we do and we welcome your inquiries.</p>
+                    <a href="#contact" class="pg-cta">Partner With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Partner and future goals End -->
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
 
         // Header Slider
@@ -204,142 +278,44 @@ document.querySelector('.slider-container').addEventListener('touchend', e => {
 });
 
 // Projects slider
-// Projects slider
-const projectsTrack = document.querySelector('.projects-track');
-const projectSlides = Array.from(projectsTrack.children);
-const projectNextButton = document.querySelector('.next-btn');
-const projectPrevButton = document.querySelector('.prev-btn');
-const projectDotsContainer = document.querySelector('.progress-dots');
-let projectCurrentIndex = 0;
-let autoSlideInterval;
-
-// Create dots
-projectSlides.forEach((_, idx) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (idx === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToProjectSlide(idx));
-    projectDotsContainer.appendChild(dot);
-});
-
-function updateProjectDots(index) {
-    document.querySelectorAll('.progress-dots .dot').forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === index);
-    });
-}
-
-function goToProjectSlide(index) {
-    if (window.innerWidth <= 768) {
-        projectsTrack.style.transform = `translateX(-${index * 25}%)`;
-        projectCurrentIndex = index;
-        updateProjectDots(index);
-    }
-}
-
-function startAutoSlide() {
-    if (window.innerWidth <= 768) {
-        stopAutoSlide();
-        autoSlideInterval = setInterval(() => {
-            projectCurrentIndex = (projectCurrentIndex + 1) % projectSlides.length;
-            goToProjectSlide(projectCurrentIndex);
-        }, 5000);
-    }
-}
-
-function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-}
-
-function initSlider() {
-    if (window.innerWidth <= 768) {
-        projectsTrack.style.display = 'flex';
-        projectsTrack.style.width = '400%';
-        projectSlides.forEach(slide => {
-            slide.style.width = '25%';
-            slide.style.flexShrink = '0';
+$(document).ready(function () {
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false
+                        }
+                    }
+                ]
+            });
         });
-        projectsTrack.style.transition = 'transform 0.3s ease-out';
-        startAutoSlide();
-    }
-}
-
-function disableSlider() {
-    stopAutoSlide();
-    projectsTrack.style.display = 'grid';
-    projectsTrack.style.transform = 'none';
-    projectsTrack.style.width = '100%';
-    projectSlides.forEach(slide => {
-        slide.style.width = '100%';
-    });
-}
-
-// Navigation buttons
-projectNextButton.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-        projectCurrentIndex = (projectCurrentIndex + 1) % projectSlides.length;
-        goToProjectSlide(projectCurrentIndex);
-    }
-});
-
-projectPrevButton.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-        projectCurrentIndex = (projectCurrentIndex - 1 + projectSlides.length) % projectSlides.length;
-        goToProjectSlide(projectCurrentIndex);
-    }
-});
-
-// Touch support
-let touchStartX = null;
-
-projectsTrack.addEventListener('touchstart', e => {
-    if (window.innerWidth <= 768) {
-        touchStartX = e.touches[0].clientX;
-        projectsTrack.style.transition = 'none';
-        stopAutoSlide();
-    }
-});
-
-projectsTrack.addEventListener('touchmove', e => {
-    if (!touchStartX || window.innerWidth > 768) return;
-    const touchX = e.touches[0].clientX;
-    const diff = touchStartX - touchX;
-    const movePercent = (diff / window.innerWidth) * 100;
-    const newTransform = -(projectCurrentIndex * 100) - movePercent;
-    projectsTrack.style.transform = `translateX(${newTransform}%)`;
-});
-
-projectsTrack.addEventListener('touchend', e => {
-    if (!touchStartX || window.innerWidth > 768) return;
-    projectsTrack.style.transition = 'transform 0.3s ease-out';
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > 50) {
-        if (diff > 0 && projectCurrentIndex < projectSlides.length - 1) {
-            projectCurrentIndex++;
-        } else if (diff < 0 && projectCurrentIndex > 0) {
-            projectCurrentIndex--;
-        }
-    }
-    
-    goToProjectSlide(projectCurrentIndex);
-    touchStartX = null;
-    startAutoSlide();
-});
-
-const mediaQuery = window.matchMedia('(max-width: 768px)');
-mediaQuery.addListener(handleScreenChange);
-
-function handleScreenChange(e) {
-    if (e.matches) {
-        initSlider();
-    } else {
-        disableSlider();
-    }
-}
 
 // Initialize on load
-handleScreenChange(mediaQuery);
+
 </script>
 </body>
 </html>
