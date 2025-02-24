@@ -220,7 +220,7 @@ $currentPage = "home";
     </section>
     <!-- Our Partner and future goals End -->
 
-
+    <?php include './includes/footer.php'; ?>
 
 
 
