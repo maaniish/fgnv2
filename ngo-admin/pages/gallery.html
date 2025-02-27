@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Management - NGO Admin Dashboard</title>
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+</head>
+<body data-page="gallery">
+    <!-- Mobile Warning -->
+    <div class="mobile-warning">
+        <h1>Admin Access Restricted</h1>
+        <p>This admin section can only be accessed from a desktop or laptop computer.</p>
+        <p>Please use a larger device to manage your NGO website.</p>
+    </div>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Include Sidebar -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content">
+            <!-- Include Topbar -->
+            <div id="topbar-container"></div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <h2 class="page-title">Gallery Management</h2>
+                
+                <!-- Gallery specific content here -->
+                <div class="gallery-section">
+                    <div class="section-header">
+                        <h3>Image Gallery</h3>
+                        <button class="btn btn-primary">Upload New Images</button>
+                    </div>
+                    
+                    <div class="gallery-grid">
+                        <!-- Gallery content would go here -->
+                        <p>Gallery management functionality will be implemented here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load components and scripts -->
+    <script>
+        // Load sidebar component
+        fetch('../components/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+                // After loading sidebar, load shared.js to set active state
+                const script = document.createElement('script');
+                script.src = '../js/shared.js';
+                document.body.appendChild(script);
+            });
+            
+        // Load topbar component
+        fetch('../components/topbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('topbar-container').innerHTML = data;
+            });
+            // Set active menu item for gallery page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Wait for sidebar to load
+        setTimeout(function() {
+            // Remove active class from all items
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => item.classList.remove('active'));
+            
+            // Add active class to gallery link
+            document.querySelector('.menu-item[href="gallery.html"]').classList.add('active');
+        }, 100);
+    });
+    </script>
+    <!-- At the end of gallery.html -->
+
+</body>
+</html>
