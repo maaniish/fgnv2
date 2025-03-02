@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGO Admin Dashboard</title>
+    <title>FGN Admin Dashboard</title>
     <!-- Inter Font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.min.css">
     <style>
@@ -324,7 +324,7 @@
         <!-- Sidebar -->
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h3>NGO Admin</h3>
+                <h3>FGN Admin</h3>
             </div>
             <div class="sidebar-menu">
                 <div class="menu-header">Main</div>
@@ -340,9 +340,9 @@
                     <i class="fas fa-blog"></i>
                     <span>Blog Posts</span>
                 </a>
-                <a class="menu-item" data-page="events.html">
+                <a class="menu-item" data-page="ourprojects.php">
                     <i class="fas fa-calendar-alt"></i>
-                    <span>Events</span>
+                    <span>Our Projects</span>
                 </a>
                 <a class="menu-item" data-page="gallery.html" href="pages/gallery.html">
                     <i class="fas fa-images"></i>
