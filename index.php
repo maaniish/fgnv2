@@ -98,71 +98,86 @@ $currentPage = "home";
 </section>
 <!-- ENd of about us section -->
 
-<?php
-// Include the database configuration
-include 'includes/dbconnect.php';
-// Or if you prefer to include the connection directly:
-/*
-$hostname = "localhost";
-$database = "tonupodx_v2";
-$username = "tonupodx_v2";
-$password = "6*6e*79Zrm%v";
-
-// Create connection
-$conn = new mysqli($hostname, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-*/
-
-// Query to fetch projects from database
-$sql = "SELECT * FROM projects WHERE status = 1 ORDER BY id DESC";
-$result = $conn->query($sql);
-?>
-
 <!-- Our Project Start -->
-<h2 class="projects-title">Our Projects</h2>
 
-<div class="our_futsals">
-    <div class="slider">
-        <?php 
-        // Check if there are projects
-        if ($result->num_rows > 0) {
-            // Loop through each project
-            while($row = $result->fetch_assoc()) {
-                // Get the root-relative path for images
-                $imagePath = $row['image_path'];
-                // If the path doesn't start with a slash or http, add a slash
-                if (strpos($imagePath, '/') !== 0 && strpos($imagePath, 'http') !== 0) {
-                    $imagePath = '/' . $imagePath;
-                }
-        ?>
-            <!-- Project Card -->
+        <h2 class="projects-title">Our Projects</h2>
+        
+        <div class="our_futsals">
+        <div class="slider">
+            <!-- Futsal Card 1 -->
             <div class="futsal-card">
                 <div class="futsal-image-container">
-                    <img src="<?php echo htmlspecialchars($imagePath); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>" class="futsal-image">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
                 </div>
                 <div class="futsal-info">
-                    <p class="mini"><?php echo htmlspecialchars($row['category']); ?></p>
-                    <h2 class="futsal-title"><?php echo htmlspecialchars($row['title']); ?></h2>
-                    <p class="futsal-location"><?php echo htmlspecialchars(substr($row['description'], 0, 150)) . '...'; ?></p>
-                    <a href="project-details.php?id=<?php echo $row['id']; ?>"><button class="futsal-button">Learn More</button></a>
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
                 </div>
             </div>
-        <?php
-            }
-        } else {
-            echo "<p>No projects found</p>";
-        }
-        
-        // Close connection if not using includes/config.php
-        $conn->close();
-        ?>
+
+            <!-- Futsal Card 2 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">Trafficking Prevention </p>
+                    <h2 class="futsal-title">Trafficking Prevention</h2>
+                    <p class="futsal-location">Recent trends show that over 50% of children rescued from exploitative
+                         institutions are often from Karnali province, Makawanpur and Chitawan districts. 
+                         ...</p>
+                    <button class="futsal-button">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Futsal Card 1 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Futsal Card 1 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Futsal Card 1 -->
+            <div class="futsal-card">
+                <div class="futsal-image-container">
+                    <img src="../img/dhanentari_futsal/2.jpg" alt="Futsal Image" class="futsal-image">
+                    
+                </div>
+                <div class="futsal-info">
+                    <p class="mini">De-institutional </p>
+                    <h2 class="futsal-title">Rescue & Rehabilitation</h2>
+                    <p class="futsal-location">Under this project, vulnerable children are rescued from abusive situations who are victims of trafficking and displacement.....</p>
+                    <button class="futsal-button">Learn More</button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<!-- Our Project End -->
+    <!-- Our Project End -->
 
 <!-- Where we work Start -->
 <div class="wherewework">
